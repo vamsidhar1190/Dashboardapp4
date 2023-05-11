@@ -1,0 +1,77 @@
+<div class="sidebar" [class.sidebar-close]="!openSidebar">
+  <div class="logo-details">
+
+    <img src="../../assets/hospital.png">
+
+  </div>
+
+  <ul class="nav-links" id="nav-links">
+    <div class="">
+      <!-- <img src="../../assets/" alt="" style="width: 200px; transform: translatex(-12px);"> -->
+    </div>
+    <li *ngFor="let item of menuSidebar" #itemEl routerLinkActive="active">
+      <div *ngIf="item.sub_menu.length == 0" class="dropdown-title">
+        <a [routerLink]="[item.link]">
+          <i [class]="item.icon" class="icons"> </i>
+          <span class="link_name">{{item.link_name}}</span>
+        </a>
+      </div>
+
+      <!-- <div *ngIf="item.sub_menu.length > 0" class="dropdown-title" (click)="showSubmenu(itemEl)">
+        <a>
+          <i [class]="item.icon" class="icons"></i>
+    <li><a class="link_name">{{item.link_name}}</a></li>
+    </a>
+    <i class='bx bxs-chevron-down arrw'></i>
+</div> -->
+<ul class="sub-menu" [class.blank]="item.sub_menu.length == 0">
+  <li><a class="link_name">{{item.link_name}}</a></li>
+  <li *ngFor="let item_sub of item.sub_menu" routerLinkActive="active">
+    <a [routerLink]="[item_sub.link]">{{item_sub.link_name}}</a>
+  </li>
+</ul>
+</li>
+<label class="label-hamburger-menu" for="checkbox-hamburger-menu">
+  <i class="pi pi-arrow-right sidebar-button "></i>
+</label>
+</ul>
+</div>
+<section class="home-section mt-3 " style="height: 100%;">
+  <div class="container-fluid">
+    <div class="home-header ">
+      <div class="hamburger-menu">
+        <input type="checkbox" id="checkbox-hamburger-menu" [(ngModel)]="openSidebar" />
+        <label class="label-hamburger-menu" for="checkbox-hamburger-menu">
+        </label>
+      </div>
+      <div class="title  d-flex col-10">
+        <div class="d-flex col-8">
+          <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText [(ngModel)]="value" />
+          </span>
+
+        </div>
+        <div class="col-1 header-content-info">
+          <div class=" bd-highlight  me-3 mb gap-3 d-flex m-1">
+
+            <div class="p-1 bd-highlight icon text-color"> <i class="pi pi-bell text-1xl" pBadge value="4"
+                severity="danger" style="font-size: 30px;"></i></div>
+
+            <div class="img-data">
+              <img src="../../assets/man.png" alt="" class="profile-imgs">
+              <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"
+                class="dropdown"></p-dropdown>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-blue-100">
+    <router-outlet></router-outlet>
+  </div>
+</section>
