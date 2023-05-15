@@ -12,7 +12,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { NgApexchartsModule } from "ng-apexcharts";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ChartModule } from 'primeng/chart';
-
+import {HttpClientModule }from '@angular/common/http'
 
 
 
@@ -33,7 +33,9 @@ import { ChartModule } from 'primeng/chart';
     BrowserAnimationsModule,
     CalendarModule,
     NgApexchartsModule,
-    ChartModule
+    ChartModule,
+    HttpClientModule
+
 
 
   ],

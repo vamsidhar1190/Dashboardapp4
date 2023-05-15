@@ -188,6 +188,10 @@ box-shadow: 0 0 2PX 2PX #ccc;
   max-width: 650px;
   // margin: 32PX auto;
 }
+#recentusers{
+  background-color: white;
+  border-radius: 5px;
+}
 .three-chart-wrapper{
   width: 63%;
   // justify-content: space-between;
@@ -222,4 +226,11 @@ box-shadow: 0 0 2PX 2PX #ccc;
   box-shadow: 0 0 3px 3px #ccc;
   border-radius: 2PX;
 
+}
+.three-chart-wrapper-block-third{
+  width: 40%;
+  background-color: #fff;
+  box-shadow: 0 0 3px 3px #ccc;
+  margin-bottom: 10px;
+  border-radius: 2px;
 }

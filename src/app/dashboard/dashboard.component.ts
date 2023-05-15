@@ -14,6 +14,8 @@ import {
   ApexTooltip
 } from "ng-apexcharts";
 import { series } from "./data";
+import { Recentusers } from '../interfaces/recentusers';
+import { MedicalService } from '../services/medical.service';
 
 
 
@@ -105,10 +107,9 @@ interface Year {
 })
 export class DashboardComponent  implements OnInit{
 
-  data1: any;
-
-    options1: any;
-  date!: Date[];
+  public data1: any;
+  public  options1: any;
+  public date!: Date[];
   public chartOptions1: any
   public chartOptions2: any
   public chartOptions3: any
@@ -116,11 +117,13 @@ export class DashboardComponent  implements OnInit{
   public chartOptions5: any
   public chartOptions6: any
 
-  selectedYears!: City;
-  Years!: Year[];
-
-
-
+  public selectedYears!: City;
+  public Years!: Year[];
+  public recentUsers:Recentusers[]=[]
+  
+constructor(private serviceRef:MedicalService){
+  
+}
   ngOnInit(){
     this.visitsDep();
     this.Avgvisit();
@@ -130,8 +133,10 @@ export class DashboardComponent  implements OnInit{
     this.femalevisit();
     this.patients();
     
+    this.femalevisit()
+    this.onRecentUsers()
   }
-  visitsDep(){
+  public visitsDep():void{
     const documentStyle = getComputedStyle(document.documentElement);
         const textColor = documentStyle.getPropertyValue('--text-color');
 
@@ -158,7 +163,7 @@ export class DashboardComponent  implements OnInit{
             }
         };
   }
-  Avgvisit(){
+  public Avgvisit():void{
     this.chartOptions2 = {
       series: [
         {
@@ -267,7 +272,7 @@ export class DashboardComponent  implements OnInit{
       }
     };
   }
-  Reportedcases(){
+  public Reportedcases():void{
     this.chartOptions3 = {
       series: [
         {
@@ -362,7 +367,7 @@ export class DashboardComponent  implements OnInit{
     };
   }
 
-  gendervisit(){
+  public gendervisit():void{
     this.chartOptions4 = {
       series: [
         {
@@ -403,7 +408,7 @@ export class DashboardComponent  implements OnInit{
       }
     };
   }
-  malevisit(){
+  public malevisit():void{
     this.chartOptions5 = {
       series: [
         {
@@ -447,7 +452,7 @@ export class DashboardComponent  implements OnInit{
       }
     };
   }
-  femalevisit(){
+  public femalevisit():void{
     this.chartOptions6 = {
       series: [
         {
@@ -490,7 +495,7 @@ export class DashboardComponent  implements OnInit{
     };
   }
 
-  patients(){
+  public  patients():void{
     this.Years = [
         { name: 'Day', code: 'YEST' },
         { name: 'Month', code: 'TD' },
@@ -500,6 +505,11 @@ export class DashboardComponent  implements OnInit{
     ];
 
 }
+  public onRecentUsers():void{
+    this.serviceRef.onRecentUsers().subscribe((data)=>{
+      this.recentUsers=data
+    })
+  }
   }
 
   
