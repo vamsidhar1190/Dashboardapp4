@@ -17,7 +17,15 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
-  
+ .calendar-data-block .p-datepicker table td {
+    padding: 0.3rem !important; 
+}
+.calendar-data-block .p-element {
+  background: none;
+}
+.calendar-data-block   .p-datepicker {
+  border: none !important;
+}
   .text-sidebar {
     font-size: 30px;
     font-weight: 600;
