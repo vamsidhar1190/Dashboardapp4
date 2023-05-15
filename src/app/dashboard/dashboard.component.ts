@@ -87,6 +87,15 @@ export type ChartOptions6 = {
   subtitle: ApexTitleSubtitle;
 };
 
+interface City {
+  name: string;
+  code: string;
+}
+interface Year {
+  name: string;
+  code: string;
+}
+
 
 
 @Component({
@@ -107,13 +116,19 @@ export class DashboardComponent  implements OnInit{
   public chartOptions5: any
   public chartOptions6: any
 
+  selectedYears!: City;
+  Years!: Year[];
+
+
+
   ngOnInit(){
     this.visitsDep();
     this.Avgvisit();
     this.Reportedcases();
     this.gendervisit();
     this.malevisit();
-    this.femalevisit()
+    this.femalevisit();
+    this.patients();
     
   }
   visitsDep(){
@@ -474,6 +489,17 @@ export class DashboardComponent  implements OnInit{
       }
     };
   }
+
+  patients(){
+    this.Years = [
+        { name: 'Day', code: 'YEST' },
+        { name: 'Month', code: 'TD' },
+        { name: 'Year', code: 'TW' },
+        
+
+    ];
+
+}
   }
 
   
