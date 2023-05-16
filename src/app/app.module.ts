@@ -12,7 +12,11 @@ import { CalendarModule } from 'primeng/calendar';
 import { NgApexchartsModule } from "ng-apexcharts";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ChartModule } from 'primeng/chart';
-import {HttpClientModule }from '@angular/common/http'
+import {HttpClientModule }from '@angular/common/http';
+import { UserComponent } from './user/user.component';
+import { MessagesComponent } from './messages/messages.component';
+import { DateComponent } from './date/date.component';
+import { FormsComponent } from './forms/forms.component'
 
 
 
@@ -21,7 +25,11 @@ import {HttpClientModule }from '@angular/common/http'
   declarations: [
     AppComponent,
     SidenavComponent,
-    DashboardComponent
+    DashboardComponent,
+    UserComponent,
+    MessagesComponent,
+    DateComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,

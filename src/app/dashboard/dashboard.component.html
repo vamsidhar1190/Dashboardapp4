@@ -1,15 +1,10 @@
 <div class="calendarchart-wrapper">
-
-
   <div class="card calendar-data calendar-data-block">
     <p-calendar class="max-w-full" [(ngModel)]="date" [inline]="true" [showWeek]="true"
       [scrollLeft]="false"></p-calendar>
   </div>
 
-  <div class="block-content-wrapper">
-
-
-
+  <div class="block-content-wrapper" >
     <div class="  card-1">
       <div class="m-3">
         <div class="d-flex car-data gap-4">
@@ -20,7 +15,7 @@
         <div class="d-flex card-data ju">
           <p>Last 7days</p>
           <div class="d-flex">
-            <span class="material-icons card-1-icon ms-1" >trending_down</span>
+            <span class="material-icons card-1-icon ms-1">trending_down</span>
             <h6 style="color: #984e66;">2.21%</h6>
           </div>
         </div>
@@ -75,24 +70,29 @@
       </div>
     </div>
   </div>
-  <div class=" bg-white chart-wrapper-block p-4" >
+  <div class=" bg-white chart-wrapper-block p-4">
     <div class="d-flex justify-content-between">
       <h5 class="font-bold">Patient Visit By Department</h5>
       <p-dropdown [options]="Years" [(ngModel)]="selectedYears" optionLabel="name" class="me-2"></p-dropdown>
     </div>
-   
+
     <p-chart type="doughnut" [data]="data1" [options]="options1" class="doughchart"></p-chart>
   </div>
 </div>
+
+
+
+
+
 
 <div class="d-flex gap-2 Patient-wrapper">
   <div class="bg-white chartpat  chartpat-wrapper-info">
     <div id="chart">
       <div class="d-flex justify-content-between">
         <h6 class="font-bold mt-2">Average Patient Visit</h6>
-      <p-dropdown [options]="Years" [(ngModel)]="selectedYears" optionLabel="name" class="me-2"></p-dropdown>
+        <p-dropdown [options]="Years" [(ngModel)]="selectedYears" optionLabel="name" class="me-2"></p-dropdown>
       </div>
-      
+
       <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart" [dataLabels]="chartOptions2.dataLabels"
         [plotOptions]="chartOptions2.plotOptions" [yaxis]="chartOptions2.yaxis" [xaxis]="chartOptions2.xaxis"
         [fill]="chartOptions2.fill" [title]="chartOptions2.title"></apx-chart>
@@ -133,67 +133,89 @@
   </div>
 </div>
 <div class="d-flex">
-<div class="mt-3 d-flex three-chart-wrapper">
-  <div class="three-chart-wrapper-block-first">
-  <div id="visitchart">
-    <div class="d-flex justify-content-between">
-      <h6 class="p-3 font-bold"> Patient Visit by Gender</h6>
-      <p-dropdown [options]="Years" [(ngModel)]="selectedYears" optionLabel="name" class="me-2" class="mt-2 me-2" ></p-dropdown>
-    </div>
-    <apx-chart [series]="chartOptions4.series" [chart]="chartOptions4.chart" [xaxis]="chartOptions4.xaxis"
-      [stroke]="chartOptions4.stroke" [tooltip]="chartOptions4.tooltip"
-      [dataLabels]="chartOptions4.dataLabels"></apx-chart>  
-  </div>
-  </div>
-  <div class="three-chart-wrapper-block-second p-3 ">
-    <div id="malechart" class="three-chart-wrapper-block-second-I">
-      <h6 class="p-3 font-bold">Male Patients</h6>
-      <apx-chart [series]="chartOptions5.series" [chart]="chartOptions5.chart" [xaxis]="chartOptions5.xaxis"
-        [stroke]="chartOptions5.stroke" [dataLabels]="chartOptions5.dataLabels" [yaxis]="chartOptions5.yaxis"
-        [labels]="chartOptions5.labels" [legend]="chartOptions5.legend" [title]="chartOptions5.title"
-        [subtitle]="chartOptions5.subtitle"></apx-chart>
-    </div>
-    <div id="femalechart" class="three-chart-wrapper-block-second-II">
-      <h6 class="p-3 font-bold">Female Patients</h6>
-      <apx-chart [series]="chartOptions6.series" [chart]="chartOptions6.chart" [xaxis]="chartOptions6.xaxis"
-        [stroke]="chartOptions6.stroke" [dataLabels]="chartOptions6.dataLabels" [yaxis]="chartOptions6.yaxis"
-        [labels]="chartOptions6.labels" [legend]="chartOptions6.legend" [title]="chartOptions6.title"
-        [subtitle]="chartOptions6.subtitle"></apx-chart>
-    </div>
-  </div>
-</div>
-<div class="three-chart-wrapper-block-third mt-3">
-  <div id="recentusers">
-    <div class="flex justify-content-between">
-      <div>
-        <h6 class="p-3 font-bold">Recent Activity</h6>
-      </div>
-      <div class="pt-2">
-        <p-dropdown [options]="Years" [(ngModel)]="selectedYears" optionLabel="name" class="me-2" class="mt-2 me-2" ></p-dropdown>
+  <div class="mt-3 d-flex three-chart-wrapper">
+    <div class="three-chart-wrapper-block-first">
+      <div id="visitchart">
+        <div class="d-flex justify-content-between">
+          <h6 class="p-3 font-bold"> Patient Visit by Gender</h6>
+          <p-dropdown [options]="Years" [(ngModel)]="selectedYears" optionLabel="name" class="me-2"
+            class="mt-2 me-2"></p-dropdown>
+        </div>
+        <apx-chart [series]="chartOptions4.series" [chart]="chartOptions4.chart" [xaxis]="chartOptions4.xaxis"
+          [stroke]="chartOptions4.stroke" [tooltip]="chartOptions4.tooltip"
+          [dataLabels]="chartOptions4.dataLabels"></apx-chart>
       </div>
     </div>
-     <div class="flex justify-content-between mt-3 p-1 "  *ngFor="let users of recentUsers">
-      <div class="flex inline ">
-        <div class="mr-3 mt-2">
-          <img [src]="users.image" alt="" class="border-circle" width="40px" height="40px">
+    <div class="three-chart-wrapper-block-second p-3 ">
+      <div id="malechart" class="three-chart-wrapper-block-second-I">
+        <h6 class="p-3 font-bold">Male Patients</h6>
+        <apx-chart [series]="chartOptions5.series" [chart]="chartOptions5.chart" [xaxis]="chartOptions5.xaxis"
+          [stroke]="chartOptions5.stroke" [dataLabels]="chartOptions5.dataLabels" [yaxis]="chartOptions5.yaxis"
+          [labels]="chartOptions5.labels" [legend]="chartOptions5.legend" [title]="chartOptions5.title"
+          [subtitle]="chartOptions5.subtitle"></apx-chart>
+      </div>
+      <div id="femalechart" class="three-chart-wrapper-block-second-II">
+        <h6 class="p-3 font-bold">Female Patients</h6>
+        <apx-chart [series]="chartOptions6.series" [chart]="chartOptions6.chart" [xaxis]="chartOptions6.xaxis"
+          [stroke]="chartOptions6.stroke" [dataLabels]="chartOptions6.dataLabels" [yaxis]="chartOptions6.yaxis"
+          [labels]="chartOptions6.labels" [legend]="chartOptions6.legend" [title]="chartOptions6.title"
+          [subtitle]="chartOptions6.subtitle"></apx-chart>
+      </div>
+    </div>
+  </div>
+  <div class="three-chart-wrapper-block-third mt-3">
+    <div id="recentusers">
+      <div class="flex justify-content-between">
+        <div>
+          <h6 class="p-3 font-bold">Recent Activity</h6>
+        </div>
+        <div class="pt-2">
+          <p-dropdown [options]="Years" [(ngModel)]="selectedYears" optionLabel="name" class="me-2"
+            class="mt-2 me-2"></p-dropdown>
+        </div>
+      </div>
+      <div class="flex justify-content-between mt-3 p-1 " *ngFor="let users of recentUsers">
+        <div class="flex inline ">
+          <div class="mr-3 mt-2">
+            <img [src]="users.image" alt="" class="border-circle" width="40px" height="40px">
+          </div>
+          <div>
+            <h5>{{users.username}}</h5>
+            <p>{{users.time}}</p>
+          </div>
         </div>
         <div>
-          <h5>{{users.username}}</h5>
-          <p>{{users.time}}</p>
-        </div>
-      </div>
-      <div>
-        <div class="flex inline ">
-          <div class="mr-2 mt-2">
-            <h5>{{users.specialization}}</h5>
-          </div>
-          <div class="mt-2">
-            <i class="pi pi-ellipsis-v"></i>
+          <div class="flex inline ">
+            <div class="mr-2 mt-2">
+              <h5>{{users.specialization}}</h5>
+            </div>
+            <div class="mt-2">
+              <i class="pi pi-ellipsis-v"></i>
+            </div>
           </div>
         </div>
       </div>
-    </div> 
+    </div>
   </div>
 </div>
-</div>
 
+
+
+
+
+
+
+<div class="m-3 lines-background">
+  <div class="d-flex car-data gap-4">
+      <img src="../../assets/user.png" alt="" class="images-user-1">
+      <h6 class="content-wrap">Patient</h6>
+  </div>
+  <h3 class="mt-2">1,863</h3>
+  <div class="d-flex card-data ju">
+      <p>Last 7days</p>
+      <div class="d-flex">
+          <span class="material-icons card-1-icon ms-1">trending_down</span>
+          <h6 style="color: #984e66;">2.21%</h6>
+      </div>
+  </div>
+</div>

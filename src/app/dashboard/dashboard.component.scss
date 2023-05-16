@@ -42,6 +42,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
   }
   .calendar-data-block{
     width: 32.5%;
@@ -55,7 +56,7 @@
     flex-wrap: wrap;
   }
   .chart-wrapper-block{
-    width: 35.5%;
+    width: 33.5%;
     border-radius: 2PX;
     box-shadow: 0 0 2PX 2PX #ccc;
   }
@@ -233,4 +234,14 @@ box-shadow: 0 0 2PX 2PX #ccc;
   box-shadow: 0 0 3px 3px #ccc;
   margin-bottom: 10px;
   border-radius: 2px;
+}
+
+
+
+.lines-background {
+  background-image: linear-gradient(90deg, #984e66 50%, transparent 50%),
+      linear-gradient(45deg, #984e66 50%, transparent 50%);
+  background-size: 8px 100%, 8px 100%;
+  background-position: 0 0, 4px 0;
+  background-repeat: repeat-y;
 }

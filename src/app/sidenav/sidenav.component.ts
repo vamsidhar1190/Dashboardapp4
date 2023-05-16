@@ -59,29 +59,29 @@ export class SidenavComponent implements OnInit {
     },
      {
       link_name: "Dashboard",
-      link: "/forms",
+      link: "/",
       icon: "bx bxs-pie-chart-alt-2",
       sub_menu: []
     }, {
       link_name: "User",
-      link: "/boards",
+      link: "/user",
       icon: "bx bxs-user",
       sub_menu: []
     }, {
       link_name: "Messages",
-      link: "/maps",
+      link: "/messages",
       icon: "bx bxl-messenger",
       sub_menu: []
     },
     {
       link_name: "Date",
-      link: "/maps",
+      link: "/date",
       icon: "bx bxs-calendar",
       sub_menu: []
     },
     {
       link_name: "Forms",
-      link: "/maps",
+      link: "/forms",
       icon: "bx bx-receipt",
       sub_menu: []
     }
