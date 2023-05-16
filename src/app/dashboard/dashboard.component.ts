@@ -286,7 +286,7 @@ constructor(private serviceRef:MedicalService){
     
       ],
       chart: {
-        height: 250,
+        height: 280,
         type: "line"
       },
       dataLabels: {

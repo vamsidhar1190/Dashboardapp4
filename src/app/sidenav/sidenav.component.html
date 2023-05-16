@@ -17,13 +17,7 @@
         </a>
       </div>
 
-      <!-- <div *ngIf="item.sub_menu.length > 0" class="dropdown-title" (click)="showSubmenu(itemEl)">
-        <a>
-          <i [class]="item.icon" class="icons"></i>
-    <li><a class="link_name">{{item.link_name}}</a></li>
-    </a>
-    <i class='bx bxs-chevron-down arrw'></i>
-</div> -->
+   
 <ul class="sub-menu" [class.blank]="item.sub_menu.length == 0">
   <li><a class="link_name">{{item.link_name}}</a></li>
   <li *ngFor="let item_sub of item.sub_menu" routerLinkActive="active">
@@ -36,24 +30,24 @@
 </label>
 </ul>
 </div>
-<section class="home-section mt-3 " style="height: 100%;">
-  <div class="container-fluid">
-    <div class="home-header ">
-      <div class="hamburger-menu">
-        <input type="checkbox" id="checkbox-hamburger-menu" [(ngModel)]="openSidebar" />
-        <label class="label-hamburger-menu" for="checkbox-hamburger-menu">
-        </label>
-      </div>
-      <div class="title  d-flex col-10">
-        <div class="d-flex col-8">
+<section class="home-section mt-1 " style="height: 100%;">
+  <div class="">
+    <div class="home-header">
+     
+      <div class="title  d-flex">
+        <div class="hamburger-menu">
+          <input type="checkbox" id="checkbox-hamburger-menu" [(ngModel)]="openSidebar" />
+          <label class="label-hamburger-menu" for="checkbox-hamburger-menu">
+          </label>
+        </div>
           <span class="p-input-icon-left">
             <i class="pi pi-search"></i>
             <input type="text" pInputText [(ngModel)]="value" />
           </span>
 
         </div>
-        <div class="col-1 header-content-info">
-          <div class=" bd-highlight  me-3 mb gap-3 d-flex m-1">
+        <div class="header-content-info">
+          <div class=" bd-highlight  mb gap-3 d-flex m-1">
 
             <div class="p-1 bd-highlight icon text-color"> <i class="pi pi-bell text-1xl" pBadge value="4"
                 severity="danger" style="font-size: 30px;"></i></div>
@@ -68,7 +62,7 @@
         </div>
       </div>
     </div>
-  </div>
+  
 
 
   <div class="main-wrapper">
