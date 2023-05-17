@@ -1,14 +1,61 @@
 
 
-/* Hamburger Menu */
-// .hamburger-menu {
-//     position: relative;
-//     width: 40px;
-//     height: 40px;
-//     z-index: 100;
-//     margin: 0 15px;
-//     margin-bottom: 22px;
-//   }
+.hamburger-menu {
+  position: relative;
+  width: 30px;
+  height: 40px;
+  margin: 0 15px;
+  margin-bottom: 15px;
+}
+
+.label-hamburger-menu {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+
+
+.label-hamburger-menu .bar {
+  width: 30px;
+  height: 4px;
+  background: gray;
+  /* box-shadow: 1px 1px 3px RGBa(0, 0, 0, 0.4); */
+  border-radius: 1px;
+  transition: 0.4s ease;
+}
+
+.label-hamburger-menu .bar:not(:first-child) {
+  margin-top: 5px;
+}
+
+#checkbox-hamburger-menu {
+  display: none;
+}
+
+#checkbox-hamburger-menu:checked + .label-hamburger-menu {
+  transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+#checkbox-hamburger-menu:checked + .label-hamburger-menu .bar {
+  width: 30px;
+  transform: rotateY(180deg) rotateX(360deg);
+}
+
+#checkbox-hamburger-menu:checked + .label-hamburger-menu .bar:first-child {
+  transform: translateY(9px) rotate(-45deg);
+}
+
+#checkbox-hamburger-menu:checked + .label-hamburger-menu .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#checkbox-hamburger-menu:checked + .label-hamburger-menu .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(45deg);
+}
   .sidebar-close .logo-details{
     padding: 20px 0px 0px 0px !important;
   width: 50px;
@@ -27,6 +74,9 @@
     
     
   }
+  .sidebar{
+
+    background-color:  #1d4f9a30 !important;  }
 
   .hide {
     display: none;
@@ -111,8 +161,13 @@
     width: calc(100% - 220px);
     transition: all 0.5s ease;
     display: flex;
+    // z-index: 101;
     flex-direction: column;
     
+  }
+  .main-wrapper{
+    position: relative;
+    z-index: 120;
   }
   
   .home-section .home-header {
@@ -151,7 +206,7 @@
     font-size: 15px;
     font-weight: 500;
     color: white;
-    margin-left: 40px;
+    margin-left: 0px;
     justify-content: space-between;
   }
   
@@ -486,4 +541,119 @@
  .p-element .p-inputwrapper .dropdown{
   transform: translateY(-17);
  }
- 
+ // tab responsive starts here
+
+@media only screen and (min-width:767px) and (max-width:1028px){
+
+  .sidebar-close .dropdown-title i {
+    font-size: 28px !important;
+} 
+.sidebar .dropdown-title .link_name{
+font-size: 23px !important;
+}
+.sidebar .dropdown-title .link_name i{
+font-size: 23px !important;
+
+}
+.pi-times{
+  display: none;
+}
+.sidebar .nav-links li i::before {
+font-size: 23px !important;}
+
+
+
+
+}
+.pi-times{
+  display: none;
+}
+// tab responsive ends here
+
+
+// mobile responsive starts here
+@media only screen and (max-width:767px){
+  .sidebar{
+    width: 180px;
+    z-index: 130;
+    background-color: #a0c4e4 !important;
+
+
+}
+.pi-times{
+  display: block;
+  color: #fff;
+  position: absolute;
+  right: 8px;
+  top: 12px;
+}
+.sidebar-close{
+  display: none;
+  width: 0px;
+}
+.hamburger-menu {
+  left: -7px;
+margin: 0px !important;
+z-index: 140;
+}
+
+
+.sidebar.sidebar-close {
+  width: 0px;
+  display: none;
+}
+.sidebar.sidebar-close ~ .home-section {
+left: 0px !important;
+width: calc(100% - 0px) !important;
+}
+.sidebar .nav-links {
+  width: 180px;
+  padding-bottom: 20px;
+}
+.sidebar .nav-links  .dropdown-title {
+  width: 180px;
+}
+.home-section {
+  height: 100vh;
+  // z-index: 0;
+ left: 0px; 
+ width: calc(100% - 0px);
+}
+.home-header .p-input-icon-left > .p-inputtext {
+  width: 100px;
+}
+.home-section .home-header .title {
+  margin-left: 5px;}
+  .header-content-info{
+    float: none !important;
+    /* display: flex; */
+    /* align-items: center; */
+}
+.header-content-info .bd-highlight{
+gap: 0px !important;
+align-items: center;
+}.header-content-info
+ .profile-imgs {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  transform: translateY(0px); 
+}
+
+
+.main-wrapper {
+  padding: 10px;
+}
+.pi-bell{
+  font-size: 22px !important;
+}
+.home-section .home-header  .p-input-icon-left, .p-input-icon-right {
+left: 5px;
+}
+
+
+
+
+}
+
+// mobile responsive ends here

@@ -128,3 +128,38 @@ margin: 0 auto;
 .chart-wrapper-block canvas{
   object-fit: cover !important;
 }
+// tab responsive starts here
+
+@media only screen and (min-width:767px) and (max-width:1028px){
+
+ .calendarchart-wrapper .p-datepicker table th {
+    // padding: 0.7rem  0.9rem !important;
+    padding-left: 1.65rem;
+  }
+ .calendarchart-wrapper .p-datepicker table th span{
+  font-size: 22px !important;
+ }
+ .calendarchart-wrapper .p-datepicker table td span{
+  font-size: 22px !important;
+ }
+ .calendarchart-wrapper .p-datepicker-title button{
+  font-size: 25px;
+
+ }
+  .calendarchart-wrapper  .calendar-data-block .p-element {
+//  margin: 0px !important;
+}
+.home-header .p-inputwrapper-filled span{
+  font-size: 20px !important;
+  }
+}
+// tab responsive ends here
+
+
+// mobile responsive starts here
+@media only screen and (max-width:767px){
+  
+
+
+}
+// mobile responsive ends here

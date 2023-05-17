@@ -1,246 +1,235 @@
-.card-data{
-    justify-content: center;
-    justify-content:  space-between;
+.card-data {
+  justify-content: center;
+  justify-content: space-between;
 }
 .image-content-info {
-    width: 40px;
-    height: 40px;
-    // background-color:rgb(161 64 88 / 90%);
-    background-color: rgb(78 82 114 / 90%);
-    padding: 2px;
-    overflow: hidden;
+  width: 40px;
+  height: 40px;
+  // background-color:rgb(161 64 88 / 90%);
+  background-color: rgb(78 82 114 / 90%);
+  padding: 2px;
+  overflow: hidden;
+  border-radius: 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
 
-    img{
-      width: 100%;
-      height: 100%;
-    border-radius: 10px;
-
-      // object-fit: cover;
-    }
+    // object-fit: cover;
+  }
 }
-.image-content-info-align{
+.image-content-info-align {
   align-items: center;
 }
-.group-month-wrapper-img{
+.group-month-wrapper-img {
   width: 40px;
   height: 40px;
   margin: 0 auto;
   background-color: #1600ff26;
-  padding: 2PX;
+  padding: 2px;
   border-radius: 10px;
 }
-.group-month-wrapper-img img{
+.group-month-wrapper-img img {
   width: 100%;
   height: 100%;
 }
-.car-data{
+.car-data {
   align-items: center;
 }
-.images-user-3{
+.images-user-3 {
   width: 50px;
   background-color: #00ffaf40;
-  padding: 2PX;
-  border-radius: 2PX;
+  padding: 2px;
+  border-radius: 2px;
 }
-.images-user-4{
+.images-user-4 {
   width: 50px;
   background-color: #8269833b;
-  padding: 2PX;
-  border-radius: 2PX;
+  padding: 2px;
+  border-radius: 2px;
 }
-.content-wrap{
-    font-size: 18px;
-    font-weight: bold;
-   margin-top: 10px;
+.content-wrap {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 #chart {
-    max-width: auto;
-    // margin: 32PX auto;
-    padding: 10px;
-    box-shadow: 0 0 1PX 1PX #ccc;
-    border-radius: 10px;
-  }
-  .calendarchart-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .calendar-data-block{
-    width: 30.5%;
-    box-shadow: 0 0 2px 2px #ccc;
-    border-radius: 10px;
-
-   
-  }
-  .block-content-wrapper{
-    width: 30.5%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .chart-wrapper-block{
-    width: 37%;
-    border-radius: 10px;
-    box-shadow: 0 0 2PX 2PX #ccc;
-  }
-  .block-content-wrapper .card{
-    width: 47%;
-    border-radius: 10px;
-
-
+  max-width: auto;
+  // margin: 32PX auto;
+  padding: 10px;
+  box-shadow: 0 0 1px 1px #ccc;
+  border-radius: 10px;
 }
-.card-1{
+.calendarchart-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.calendar-data-block {
+  width: 30.5%;
+  box-shadow: 0 0 2px 2px #ccc;
+  border-radius: 10px;
+}
+.block-content-wrapper {
+  width: 30.5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.chart-wrapper-block {
+  width: 37%;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 2px #ccc;
+}
+.block-content-wrapper .card {
+  width: 47%;
+  border-radius: 10px;
+}
+.card-1 {
   background-color: #b8dfe7;
-  border-radius: 2PX;
-  box-shadow: 0 0 2px 2px #CCC;
-
+  border-radius: 2px;
+  box-shadow: 0 0 2px 2px #ccc;
 }
-.card-2{
+.card-2 {
   background-color: #1b313133;
-  border-radius: 2PX;
-  box-shadow: 0 0 2px 2px #CCC;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 2px #ccc;
 }
-.card-3{
+.card-3 {
   background-color: aliceblue;
-  border-radius: 2PX;
-  box-shadow: 0 0 2px 2px #CCC;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 2px #ccc;
 }
-.card-4{
+.card-4 {
   background-color: #c6e0d76b;
-  border-radius: 2PX;
-  box-shadow: 0 0 2px 2px #CCC;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 2px #ccc;
 }
-.user-month-wrapper-img{
+.user-month-wrapper-img {
   width: 40px;
   height: 40px;
   overflow: hidden;
   margin: 0 auto;
   background-color: #42bb7f30;
   border-radius: 10px;
-
 }
-.user-month-wrapper-img img{
+.user-month-wrapper-img img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-.card-1-icon{
+.card-1-icon {
   color: #984e66;
 }
 .block-content-wrapper .card-1,
-.block-content-wrapper .card-2{
-    margin-bottom: 10px;
+.block-content-wrapper .card-2 {
+  margin-bottom: 10px;
 }
 .block-content-wrapper .card-4,
-.block-content-wrapper .card-3{
-    margin-top: 10px;
+.block-content-wrapper .card-3 {
+  margin-top: 10px;
 }
 .block-content-wrapper .card-3,
-.block-content-wrapper .card-1{
-    margin-right: 10px;
+.block-content-wrapper .card-1 {
+  margin-right: 10px;
 }
 .block-content-wrapper .card-4,
-.block-content-wrapper .card-2{
-    margin-left: 10px;
+.block-content-wrapper .card-2 {
+  margin-left: 10px;
 }
-.user-month-wrapper{
+.user-month-wrapper {
   padding: 20px 13px;
   box-shadow: 0 0 1px 1px #ccc;
- 
 
   border-radius: 10px;
   width: 19%;
   // background-color: #957d5d2e;
-  
 }
-.group-month-wrapper{
+.group-month-wrapper {
   padding: 20px 17px;
-   box-shadow: 0 0 1px 1px #ccc;
+  box-shadow: 0 0 1px 1px #ccc;
   border-radius: 10px;
- 
+
   width: 19%;
   text-align: center;
   // background-color: #5d95952e;
 }
-.Patient-wrapper-months{
-justify-content: center;
+.Patient-wrapper-months {
+  justify-content: center;
 }
-.patient-heading{
+.patient-heading {
   font-size: 16px !important;
 }
-.chartpat{
-  border-radius: 2PX;
+.chartpat {
+  border-radius: 2px;
 }
-.Patient-wrapper{
-  padding-top: 12PX;
+.Patient-wrapper {
+  padding-top: 12px;
   justify-content: space-between;
-  
 }
-.month-wrapper{
-  margin-top: 22PX;
+.month-wrapper {
+  margin-top: 22px;
   font-size: 20px;
 }
-.income-wrapper{
+.income-wrapper {
   font-size: 30px;
   font-weight: bold;
 }
-.images-users-1{
+.images-users-1 {
   margin-top: 20px;
   width: 50px;
   background-color: #42bb7f30;
-  border-radius: 2PX;
+  border-radius: 2px;
 }
-.images-users-2{
+.images-users-2 {
   margin-top: 20px;
   width: 50px;
   background-color: #ddd6cb;
-  border-radius: 2PX;
-  padding: 2PX;
-
-
+  border-radius: 2px;
+  padding: 2px;
 }
-.report-chart{
+.report-chart {
   border-radius: 10px;
 }
-.chartpat-wrapper-info{
+.chartpat-wrapper-info {
   width: 62%;
-display: flex;
-align-items: center;
-flex-direction: row;
-justify-content: space-between;
-// gap: 30px;
-flex-wrap: wrap;
-padding: 12px;
-box-shadow: 0 0 1PX 1PX #ccc;
-border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  // gap: 30px;
+  flex-wrap: wrap;
+  padding: 12px;
+  box-shadow: 0 0 1px 1px #ccc;
+  border-radius: 10px;
 }
-.chartpat-wrapper-info #chart{
+.chartpat-wrapper-info #chart {
   width: 55%;
 }
 
-.chartpat-wrapper-info .user-month-wrapper{
+.chartpat-wrapper-info .user-month-wrapper {
   width: 19%;
   text-align: center;
 }
-.month-wrapper{
+.month-wrapper {
   margin-top: 10px;
   font-size: 15px;
 }
-.income-wrapper{
+.income-wrapper {
   font-size: 16px;
 }
 
-.chartpat-wrapper-info .group-month-wrappe{
+.chartpat-wrapper-info .group-month-wrappe {
   width: 19%;
 }
 
 #visitchart {
   // max-width: 450px;
-  
+
   background-color: white;
-  border-radius: 2PX;
+  border-radius: 2px;
 }
 #malechart {
   max-width: 650px;
@@ -250,82 +239,327 @@ border-radius: 10px;
   max-width: 650px;
   // margin: 32PX auto;
 }
-#recentusers{
+#recentusers {
   background-color: white;
   border-radius: 5px;
 }
-.three-chart-wrapper{
+.three-chart-wrapper {
   width: 62%;
 
   // gap: 16px;
-justify-content: space-between;
+  justify-content: space-between;
   border-radius: 10px;
   // overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 0 1px 1px #ccc;
- 
+  // background-color: #fff;
+  // box-shadow: 0 0 1px 1px #ccc;
 }
-.three-chart-wrapper-block-first{
-  width: 49%;
-  box-shadow: 0 0 2PX 2PX #ccc;
-  border-radius: 10PX;
+.three-chart-wrapper-block-first {
+  width: 51%;
+  box-shadow: 0 0 2px 2px #ccc;
+  border-radius: 10px;
   overflow: hidden;
 }
-.three-chart-wrapper-block-second{
+.three-chart-wrapper-block-second {
   width: 47.5%;
   margin: 0px !important;
   // padding: 0px !important;
   background-color: #fff;
-  box-shadow: 0 0 2PX 2PX #ccc;
+  box-shadow: 0 0 2px 2px #ccc;
   border-radius: 10px;
   overflow: hidden;
   margin-top: 30px;
-
-
 }
-.three-chart-wrapper-block-second-I{
+.three-chart-wrapper-block-second-I {
   background-color: #fff;
   box-shadow: 0 0 3px 3px #ccc;
   margin-bottom: 10px;
   border-radius: 10px;
-
 }
-.three-chart-wrapper-block-second-II{
+.three-chart-wrapper-block-second-II {
   background-color: #fff;
   box-shadow: 0 0 3px 3px #ccc;
-  border-radius: 10PX;
-
+  border-radius: 10px;
 }
-.three-chart-wrapper-block-third{
+.three-chart-wrapper-block-third {
   width: 37%;
   background-color: #fff;
   box-shadow: 0 0 2px 2px #ccc;
   // margin-bottom: 10px;
   border-radius: 10px;
   overflow: hidden;
-
 }
-.three-chart-wrapper-main{
+.three-chart-wrapper-main {
   margin-bottom: 20px;
   justify-content: space-between;
 }
 
-.card-requirement-info-content{
+.card-requirement-info-content {
   padding-bottom: 5px;
   padding-top: 15px;
   font-size: 18px;
   font-weight: bold;
 }
-.four-card-pinfo{
-
+.four-card-pinfo {
   margin-bottom: 0px;
   font-size: 12px;
 }
-.three-chart-wrapper-block-third h5{
+.three-chart-wrapper-block-third h5 {
   font-size: 15px !important;
 }
-.three-chart-wrapper-block-third p{
+.three-chart-wrapper-block-third p {
   font-size: 14px;
 }
 
 
+// tab responsive starts here
+
+@media only screen and (min-width: 767px) and (max-width: 1028px) {
+  .calendarchart-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .calendar-data-block {
+    width: 100% !important;
+    margin-bottom: 23px;
+    margin-top: 4px;
+  }
+  .block-content-wrapper {
+    width: 100% !important;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .block-content-wrapper .card-1 {
+    margin-right: 2px !important;
+  }
+  .block-content-wrapper .card-1,
+  .block-content-wrapper .card-2 {
+    margin-bottom: 2px !important;
+  }
+  .block-content-wrapper .card-2,
+  .block-content-wrapper .card-4 {
+    margin-left: 2px !important;
+  }
+  .block-content-wrapper .card-3,
+  .block-content-wrapper .card-4 {
+    margin-top: 15px !important;
+  }
+  .chart-wrapper-block {
+    width: 100% !important;
+  }
+  .Patient-wrapper {
+    padding-top: 0px !important;
+    flex-direction: column;
+  }
+  .chartpat-wrapper-info {
+    width: 100% !important;
+  }
+  .chartpat-wrapper-info #chart {
+    width: 100% !important;
+  }
+  .chartpat-wrapper-info .user-month-wrapper {
+    width: 48% !important;
+    margin-top: 12px;
+  }
+  .chartpat-wrapper-info .group-month-wrapper {
+    width: 48% !important;
+    margin-top: 12px;
+  }
+  .report-chart {
+    width: 100% !important;
+    margin-top: 5px;
+  }
+  .three-chart-wrapper-main {
+    margin-bottom: 0px;
+    flex-direction: column;
+  }
+
+  .three-chart-wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+  .three-chart-wrapper-block-first {
+    width: 100% !important;
+  }
+  .three-chart-wrapper-block-second {
+    width: 100% !important;
+    margin-top: 12px !important;
+  }
+  .three-chart-wrapper-block-second-II {
+    margin-top: 14px;
+  }
+  .three-chart-wrapper-block-third {
+    width: 100% !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  .content-wrap{
+    font-size: 24px ;
+  }
+  .card-requirement-info-content{
+    font-size: 28px;
+  }
+  .four-card-pinfo{
+    font-size: 20px;
+  }
+ .block-content-wrapper .material-icons{
+  font-size: 30px;
+
+  }
+ .block-content-wrapper h6{
+  font-size: 24px;
+
+ }
+  .image-content-info {
+    width: 60px;
+    height: 60px;}
+    .patient-heading{
+      font-size: 24px !important;
+    }
+    .chartpat-wrapper-info h6{
+      font-size: 24px !important;
+
+    }
+    .month-wrapper{
+      font-size: 21px !important;
+      padding-bottom: 20px;
+
+    }
+    .user-month-wrapper-img {
+      width: 60px;
+      height: 60px;
+    }
+      .group-month-wrapper-img{
+        width: 60px;
+        height: 60px;
+      }
+      .Patient-wrapper-months p{
+        font-size: 20px ;
+      }
+      .Patient-wrapper-months .material-icons{
+        font-size: 26px ;
+
+      }
+      .report-chart  h6{
+        font-size: 24px !important;
+
+      }
+      .three-chart-wrapper-block-first h6{
+        font-size: 24px !important;
+
+      }
+      .three-chart-wrapper-block-second{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+      .three-chart-wrapper-block-second h6{
+        font-size: 24px !important;
+
+      }
+      .three-chart-wrapper-block-second-I{
+        margin: 0px auto;
+      }
+      .three-chart-wrapper-block-second-II{
+        margin: 0px auto;
+      }
+      .three-chart-wrapper-block-third h6{
+        font-size: 24px !important;
+
+      }
+      .three-chart-wrapper-block-third h5 {
+        font-size: 21px !important;
+    }
+    .three-chart-wrapper-block-third p {
+      font-size: 20px !important;
+  }
+  .three-chart-wrapper-block-third img{
+    width: 60px !important;
+  height: 60px !important;
+  }
+}
+// tab responsive ends here
+
+// mobile responsive starts here
+@media only screen and (max-width: 767px) {
+  .calendarchart-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .calendar-data-block {
+    width: 100% !important;
+    margin-bottom: 12px;
+    margin-top: 2px;
+  }
+  .block-content-wrapper {
+    width: 100% !important;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .block-content-wrapper .card-1 {
+    margin-right: 2px !important;
+  }
+  .block-content-wrapper .card-1,
+  .block-content-wrapper .card-2 {
+    margin-bottom: 2px !important;
+  }
+  .block-content-wrapper .card-2,
+  .block-content-wrapper .card-4 {
+    margin-left: 2px !important;
+  }
+  .block-content-wrapper .card-3,
+  .block-content-wrapper .card-4 {
+    margin-top: 15px !important;
+  }
+  .chart-wrapper-block {
+    width: 100% !important;
+  }
+  .Patient-wrapper {
+    padding-top: 0px !important;
+    flex-direction: column;
+  }
+  .chartpat-wrapper-info {
+    width: 100% !important;
+  }
+  .chartpat-wrapper-info #chart {
+    width: 100% !important;
+  }
+  .chartpat-wrapper-info .user-month-wrapper {
+    width: 48% !important;
+    margin-top: 12px;
+  }
+  .chartpat-wrapper-info .group-month-wrapper {
+    width: 48% !important;
+    margin-top: 12px;
+  }
+  .report-chart {
+    width: 100% !important;
+    margin-top: 5px;
+  }
+  .three-chart-wrapper-main {
+    margin-bottom: 0px;
+    flex-direction: column;
+  }
+
+  .three-chart-wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+  .three-chart-wrapper-block-first {
+    width: 100% !important;
+  }
+  .three-chart-wrapper-block-second {
+    width: 100% !important;
+    margin-top: 12px !important;
+  }
+  .three-chart-wrapper-block-second-II {
+    margin-top: 14px;
+  }
+  .three-chart-wrapper-block-third {
+    width: 100% !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+  }
+}
+// mobile responsive ends here

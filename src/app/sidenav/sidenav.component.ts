@@ -27,6 +27,12 @@ export class SidenavComponent implements OnInit {
   showSearchInput = true;
   value!:string;
 
+  isCollapsed = false;
+  // value: any;
+  isSidebarOpen: boolean = false;
+
+
+  
   isOpen = false;
 
   openSidebar: boolean = true;
