@@ -111,4 +111,20 @@ color: blue;
 .home-header .p-input-icon-left > .p-inputtext {
   padding-left: 1.5rem;
   padding-bottom: 4px;
+} 
+.calendar-data-block  .p-calendar{
+display: flex !important;
+}
+.chartpat-wrapper-info  .apexcharts-canvas{
+margin: 0 auto;
+}
+.chartpat-wrapper-info   .apexcharts-toolbar{
+  right: -11px !important;
+}
+.apexcharts-canvas{
+margin: 0 auto;
+
+}
+.chart-wrapper-block canvas{
+  object-fit: cover !important;
 }
