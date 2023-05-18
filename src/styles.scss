@@ -128,6 +128,11 @@ margin: 0 auto;
 .chart-wrapper-block canvas{
   object-fit: cover !important;
 }
+.p-input-icon-left>i, .p-input-icon-left>.p-icon-wrapper, .p-input-icon-right>i, .p-input-icon-right>.p-icon-wrapper {
+  position: absolute;
+  top: 50%;
+  margin-top: -1rem !important;
+}
 // tab responsive starts here
 
 @media only screen and (min-width:767px) and (max-width:1028px){
@@ -159,7 +164,9 @@ margin: 0 auto;
 // mobile responsive starts here
 @media only screen and (max-width:767px){
   
-
+  .p-input-icon-left > i, .p-input-icon-left > .p-icon-wrapper, .p-input-icon-right > i, .p-input-icon-right > .p-icon-wrapper {
+     margin-top: -0.5rem !important; 
+}
 
 }
 // mobile responsive ends here
