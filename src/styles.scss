@@ -138,27 +138,16 @@ margin: 0 auto;
   top: 50%;
   margin-top: -1rem !important;
 }
-.three-chart-wrapper-block-first  .visitchart{ 
-width: 100%;
+.p-datepicker table td > span {
+  width: 2rem !important;
+  height: 2rem !important;
 }
-.three-chart-wrapper-block-second-I apx-chart{
-width: 100%;
-  
+.p-datepicker table th {
+   padding: 0.4rem !important; 
 }
-.three-chart-wrapper-block-second-II apx-chart{
-  width: 100%;
 
-}
-.report-chart #chart{
-  width: 100%;
 
-}
-.chart-wrapper-block .doughchart{
-  width: 100%;
-
-}
 // tab responsive starts here
-
 @media only screen and (min-width:767px) and (max-width:1028px){
 
  .calendarchart-wrapper .p-datepicker table th {
@@ -191,6 +180,10 @@ width: 100%;
   .p-input-icon-left > i, .p-input-icon-left > .p-icon-wrapper, .p-input-icon-right > i, .p-input-icon-right > .p-icon-wrapper {
      margin-top: -0.5rem !important; 
 }
-
+.chart-wrapper-block .p-element.doughchart canvas {
+  height: 260px !important;
+  width: 300px !important;
+  /* margin: 0 auto; */
+}
 }
 // mobile responsive ends here

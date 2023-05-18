@@ -116,7 +116,6 @@ export class DashboardComponent  implements OnInit{
   public chartOptions4: any
   public chartOptions5: any
   public chartOptions6: any
-
   public selectedYears!: City;
   public Years!: Year[];
   public recentUsers:Recentusers[]=[]
@@ -153,7 +152,9 @@ constructor(private serviceRef:MedicalService){
 
 
         this.options1 = {
-            cutout: '60%',
+            responsive: true,
+      maintainAspectRatio: false,
+          
             plugins: {
                 legend: {
                     labels: {

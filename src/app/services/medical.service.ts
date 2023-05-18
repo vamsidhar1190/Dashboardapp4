@@ -7,7 +7,7 @@ HttpClient
   providedIn: 'root'
 })
 export class MedicalService {
-  public recentUsers:string='../../assets/data/recent-users.json';
+  public recentUsers:string='./assets/data/recent-users.json';
   constructor(private httpClientRef:HttpClient) { }
 
   public onRecentUsers():Observable<Recentusers[]>{
