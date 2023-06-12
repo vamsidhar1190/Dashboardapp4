@@ -6,6 +6,7 @@ import { UserComponent } from './user/user.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DateComponent } from './date/date.component';
 import { FormsComponent } from './forms/forms.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,9 @@ const routes: Routes = [
     children:[
       {
         path:'',component:DashboardComponent
+      },
+      {
+        path:'dashboard',component:DashboardComponent
       },
       {
         path:'user',component:UserComponent
@@ -25,6 +29,9 @@ const routes: Routes = [
       },
       {
         path:'forms',component:FormsComponent
+      },
+      {
+        path:'profile',component:ProfileComponent
       }
     ]
   },

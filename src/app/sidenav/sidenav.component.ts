@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 
 interface City {
@@ -13,10 +15,10 @@ interface City {
 })
 export class SidenavComponent implements OnInit {
 
-
+constructor( private router: Router){ }
   cities!: City[];
 
-  selectedCity!: City;
+  selectedprofiledata!: City;
 
   ngOnInit() {
     this.dropdowndata()
@@ -40,12 +42,21 @@ export class SidenavComponent implements OnInit {
 
   dropdowndata(){
     this.cities = [
-      { name: 'Suresh', code: 'RM' },
-      { name: 'Profile', code: 'NY' },
-      { name: 'Edit Profile', code: 'RM' },
+      { name: 'Login', code: 'RM' },
+      { name: 'Profile', code: 'NY' }   
       
   ];
+
+
   }
+  navigateToProfile() {
+    if (this.selectedprofiledata.code === 'NY') {
+      this.router.navigate(['/profile']);
+    } else if (this.selectedprofiledata.code === 'RM') {
+      this.router.navigate(['/dashboard']);
+    }
+  }
+
 
   menuSidebar = [
     {
@@ -80,7 +91,7 @@ export class SidenavComponent implements OnInit {
       sub_menu: []
     },
     {
-      link_name: "Date",
+       link_name: "Date",
       link: "/date",
       icon: "bx bxs-calendar",
       sub_menu: []

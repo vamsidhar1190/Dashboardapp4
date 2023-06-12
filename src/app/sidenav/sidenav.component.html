@@ -58,8 +58,8 @@
 
             <div class="img-data">
               <img src="./assets/man.png" alt="" class="profile-imgs">
-              <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"
-                class="dropdown"></p-dropdown>
+              <p-dropdown [options]="cities" [(ngModel)]="selectedprofiledata" optionLabel="name"
+                class="dropdown" (onChange)="navigateToProfile()"></p-dropdown>
 
             </div>
           </div>

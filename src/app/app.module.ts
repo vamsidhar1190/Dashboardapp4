@@ -16,7 +16,8 @@ import {HttpClientModule }from '@angular/common/http';
 import { UserComponent } from './user/user.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DateComponent } from './date/date.component';
-import { FormsComponent } from './forms/forms.component'
+import { FormsComponent } from './forms/forms.component';
+import { ProfileComponent } from './profile/profile.component'
 
 
 
@@ -29,7 +30,8 @@ import { FormsComponent } from './forms/forms.component'
     UserComponent,
     MessagesComponent,
     DateComponent,
-    FormsComponent
+    FormsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

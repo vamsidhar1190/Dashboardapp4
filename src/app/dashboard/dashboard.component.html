@@ -85,7 +85,7 @@
   <div class=" bg-white chart-wrapper-block p-2">
     <div class="d-flex justify-content-between">
       <h5 class="font-bold patient-heading">Patient Visit By Department</h5>
-      <p-dropdown [options]="Years" [(ngModel)]="selectedYears" optionLabel="name" class="me-2"></p-dropdown>
+      <p-dropdown [options]="Years" [(ngModel)]="piechartdata" optionLabel="name" class="me-2" (onChange)="visitsDep()" ></p-dropdown>
     </div>
 
     <p-chart type="doughnut" [data]="data1" [options]="options1" class="doughchart"></p-chart>
@@ -102,7 +102,7 @@
     <div id="chart">
       <div class="d-flex justify-content-between">
         <h6 class="font-bold mt-2">Average Patient Visit</h6>
-        <p-dropdown [options]="Years" [(ngModel)]="selectedYears" optionLabel="name" class="me-2"></p-dropdown>
+        <p-dropdown [options]="barchardata" [(ngModel)]="barchartdata" optionLabel="name" class="me-2" (onChange)="Avgvisit()"></p-dropdown>
       </div>
 
       <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart" [dataLabels]="chartOptions2.dataLabels"
@@ -141,7 +141,7 @@
     <div id="chart"> 
       <div class="d-flex justify-content-between">
         <h6 class=" font-bold">Reported Cases</h6>
-        <p-dropdown [options]="Years" [(ngModel)]="selectedYears" optionLabel="name" class="me-2"></p-dropdown>
+       <p-dropdown [options]="reportdata" [(ngModel)]="reportedcase" optionLabel="name" class="me-2" (onChange)="Reported()"> </p-dropdown>
       </div>
       <apx-chart [series]="chartOptions3.series" [chart]="chartOptions3.chart" [xaxis]="chartOptions3.xaxis"
         [stroke]="chartOptions3.stroke" [tooltip]="chartOptions3.tooltip" [dataLabels]="chartOptions3.dataLabels"
@@ -156,8 +156,8 @@
       <div id="visitchart">
         <div class="d-flex justify-content-between">
           <h6 class="p-3 font-bold"> Patient Visit by Gender</h6>
-          <p-dropdown [options]="Years" [(ngModel)]="selectedYears" optionLabel="name" class="me-2"
-            class="mt-2 me-2"></p-dropdown>
+           <p-dropdown [options]="gendervisits" [(ngModel)]="Gendervists" optionLabel="name" class="me-2"
+            class="mt-2 me-2" (onChange)="genderdata()"></p-dropdown>
         </div>
         <apx-chart [series]="chartOptions4.series" [chart]="chartOptions4.chart" [xaxis]="chartOptions4.xaxis"
           [stroke]="chartOptions4.stroke" [tooltip]="chartOptions4.tooltip"
@@ -188,8 +188,8 @@
           <h6 class="p-3 font-bold">Recent Activity</h6>
         </div>
         <div class="pt-2">
-          <p-dropdown [options]="Years" [(ngModel)]="selectedYears" optionLabel="name" class="me-2"
-            class="mt-2 me-2"></p-dropdown>
+            <p-dropdown [options]="Years" [(ngModel)]="Recetactivity" optionLabel="name" class="me-2"
+              class="mt-2 me-2"></p-dropdown>
         </div>
       </div>
       <div class="flex justify-content-between mt-3 p-1 " *ngFor="let users of recentUsers">
