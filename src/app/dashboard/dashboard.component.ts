@@ -22,7 +22,7 @@ import {
   ApexTooltip,
 } from 'ng-apexcharts';
 import { series } from './data';
-import { Recentusers } from '../interfaces/recentusers';
+import { Recentusers, usersChild } from '../interfaces/recentusers';
 import { MedicalService } from '../services/medical.service';
 
 export type ChartOptions1 = {
@@ -108,7 +108,7 @@ export class DashboardComponent implements OnInit {
   public piechartdata!: any;
   public Years!: any[];
   public recentUsers: Recentusers[] = [];
-
+  public usersRecetSearching:usersChild[]=[]
   public barchartdata: any;
   public barchardata: any;
 
@@ -136,7 +136,7 @@ export class DashboardComponent implements OnInit {
     this.reportsdata();
     this.defaultPieChart();
     this.visitgender();
-    this.docactivity()
+    this.docactivity();
   }
 
   public defaultPieChart() {
@@ -713,6 +713,34 @@ export class DashboardComponent implements OnInit {
   public onRecentUsers(): void {
     this.serviceRef.onRecentUsers().subscribe((data) => {
       this.recentUsers = data;
+      this.recentUsers.filter((data)=>{
+        this.usersRecetSearching=data.recentUsersweek
+      })
     });
+    
+  }
+  public onRecentActivity():void{
+    if(this.Recetactivity.name==='Last 7 Days'){
+      this.serviceRef.onRecentUsers().subscribe((data) => {
+        this.recentUsers = data;
+        this.recentUsers.filter((data)=>{
+          this.usersRecetSearching=data.recentUsersweek
+        })
+      });
+    }else if(this.Recetactivity.name==='Last 1 Month'){
+      this.serviceRef.onRecentUsers().subscribe((data) => {
+        this.recentUsers = data;
+        this.recentUsers.filter((data)=>{
+          this.usersRecetSearching=data.recentUsersMonth
+        })
+      });
+    }else{
+      this.serviceRef.onRecentUsers().subscribe((data) => {
+        this.recentUsers = data;
+        this.recentUsers.filter((data)=>{
+          this.usersRecetSearching=data.recentUsersSixMonths
+        })
+      });
+    }
   }
 }

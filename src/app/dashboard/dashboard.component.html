@@ -188,11 +188,12 @@
           <h6 class="p-3 font-bold">Recent Activity</h6>
         </div>
         <div class="pt-2">
-            <p-dropdown [options]="Years" [(ngModel)]="Recetactivity" optionLabel="name" class="me-2"
+            <p-dropdown [options]="Years" [(ngModel)]="Recetactivity" (onChange)="onRecentActivity()" optionLabel="name" class="me-2"
               class="mt-2 me-2"></p-dropdown>
         </div>
       </div>
-      <div class="flex justify-content-between mt-3 p-1 " *ngFor="let users of recentUsers">
+      <ng-container>
+      <div class="flex justify-content-between mt-3 p-1 " *ngFor="let users of usersRecetSearching">
         <div class="flex inline ">
           <div class="mr-3 mt-2">
             <img [src]="users.image" alt="" class="border-circle" width="40px" height="40px">
@@ -213,6 +214,7 @@
           </div>
         </div>
       </div>
+    </ng-container>
     </div>
   </div>
 </div>
